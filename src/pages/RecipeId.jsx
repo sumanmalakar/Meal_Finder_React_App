@@ -9,6 +9,13 @@ export default function RecipeId() {
 
   const [details, setDetails] = useState([])
  const [activeTab, setActiveTab] = useState("instructions")
+ 
+     useEffect(() => {
+       return () => {
+         fetchDetails();
+       };
+     }, [params.name]);
+   
 
  const fetchDetails = async () => {
    const api = await fetch(
@@ -20,12 +27,7 @@ export default function RecipeId() {
     setDetails(data.meals[0]);
   };
 
-    useEffect(() => {
-      return () => {
-        fetchDetails();
-      };
-    }, [params.name]);
-   
+
 
   return (
     <DetailWrapper >
