@@ -11,7 +11,7 @@ export default function RecipeId() {
  const [activeTab, setActiveTab] = useState("instructions")
 
   const fetchDetails = async () => {
-    const searchItem = "american";
+  
 
     const api = await fetch(
       `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.name}`
@@ -34,7 +34,8 @@ export default function RecipeId() {
       <div>
         <h4>{details.strMeal}</h4>
         <h4>Location - {details.strArea}</h4>
-        <img src={details.strMealThumb} />
+        <img src={details.strMealThumb}
+        alt = {details.strMeal} />
       </div>
       <Info>
         <Button

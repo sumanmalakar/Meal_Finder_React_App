@@ -1,4 +1,4 @@
-import Pages from "./Pages";
+
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -34,7 +34,9 @@ export default function Cuisine() {
           return (
             <Link to={"/recipe/" +item.idMeal}>
               <Card key={item.idMeal}>
-                <img src={item.strMealThumb} />
+                <img src={item.strMealThumb}
+                alt = {item.strMeal}
+                />
                 <h4>{item.strMeal}</h4>
               </Card>
             </Link>

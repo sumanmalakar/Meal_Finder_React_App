@@ -55,7 +55,9 @@ export default function Veggie() {
                   <Card>
                     <Link to={"/recipe/" +recipe.idMeal}>
                       <p>{recipe.strMeal}</p>
-                      <img src={recipe.strMealThumb} />
+                      <img src={recipe.strMealThumb}
+                      alt = {recipe.strMeal}
+                      />
                       <Gradient />
                     </Link>
                   </Card>

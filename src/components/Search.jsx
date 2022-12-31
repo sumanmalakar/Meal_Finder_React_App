@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {useState} from 'react';
-import {FaSearch} from 'react-icons/fa';
+// import {FaSearch} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 export default function Search() {
