@@ -37,7 +37,7 @@ export default function Veggie() {
   return (
     <>
       <Wrapper>
-        <h3>Our Vegerarian Picks</h3>
+        <h3 style={{ color: "white" }}>Our Vegerarian Picks</h3>
 
         <Splide
           options={{
@@ -53,11 +53,9 @@ export default function Veggie() {
               <>
                 <SplideSlide key={recipe.idMeal}>
                   <Card>
-                    <Link to={"/recipe/" +recipe.idMeal}>
+                    <Link to={"/recipe/" + recipe.idMeal}>
                       <p>{recipe.strMeal}</p>
-                      <img src={recipe.strMealThumb}
-                      alt = {recipe.strMeal}
-                      />
+                      <img src={recipe.strMealThumb} alt={recipe.strMeal} />
                       <Gradient />
                     </Link>
                   </Card>

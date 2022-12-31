@@ -23,8 +23,8 @@ export default function RecipeId() {
     useEffect(() => {
       return () => {
         fetchDetails();
-      }
-    }, [params.name])
+      };
+    }, [params.name]);
    
 
   return (
@@ -70,7 +70,7 @@ export default function RecipeId() {
           </ul>
         ) : (
           <div>
-            <h3>{details.strInstructions}</h3>
+            <h4>{details.strInstructions}</h4>
           </div>
         )}
       </Info>
@@ -88,6 +88,7 @@ const DetailWrapper = styled.div`
   }
   h2 {
     margin-bottom: 2rem;
+    color:white;
   }
   li {
     font-size: 1.2rem;
@@ -97,6 +98,8 @@ const DetailWrapper = styled.div`
     text-align:center;
     font-weight:bold;
     font-size:1.4em;
+    color:white;
+    font-family:sans-sarif;
 
   }
   ul {

@@ -41,7 +41,7 @@ export default function Popular() {
   return (
     <>
         <Wrapper>
-          <h3>Popular Picks</h3>
+          <h3 style={{color:"white"}}>Popular Picks</h3>
 
           <Splide 
           options = {{
