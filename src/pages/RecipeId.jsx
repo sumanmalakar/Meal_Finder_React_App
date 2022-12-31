@@ -7,31 +7,29 @@ import React from 'react'
 export default function RecipeId() {
   let params = useParams();
 
-  const [details, setDetails] = useState({})
+  const [details, setDetails] = useState([])
  const [activeTab, setActiveTab] = useState("instructions")
 
-  const fetchDetails = async () => {
-  
-
-    const api = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.name}`
-    );
-
+ const fetchDetails = async () => {
+   const api = await fetch(
+     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.name}`)
+     
     const data = await api.json();
-
-    console.log(data.meals[0]);
+    
+    console.log(data.meals);
     setDetails(data.meals[0]);
   };
 
-  useEffect(() => {
-    return () => {
-      fetchDetails();
-    }
-  }, [params.name])
+    useEffect(() => {
+      return () => {
+        fetchDetails();
+      }
+    }, [params.name])
+   
 
   return (
-    <DetailWrapper>
-      <div>
+    <DetailWrapper >
+      <div key = {details.idMeal}>
         <h4>{details.strMeal}</h4>
         <h4>Location - {details.strArea}</h4>
         <img src={details.strMealThumb}
