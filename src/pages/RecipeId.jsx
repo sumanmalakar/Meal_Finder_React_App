@@ -10,11 +10,15 @@ export default function RecipeId() {
   const [details, setDetails] = useState([])
  const [activeTab, setActiveTab] = useState("instructions")
  
+    //  useEffect(() => {
+    //    return () => {
+    //      fetchDetails();
+    //    };
+    //  }, [params.name]);
      useEffect(() => {
-       return () => {
-         fetchDetails();
-       };
-     }, [params.name]);
+   
+      fetchDetails();
+     }, []);
    
 
  const fetchDetails = async () => {
