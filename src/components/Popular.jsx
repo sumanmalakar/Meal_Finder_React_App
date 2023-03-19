@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Link } from "react-router-dom";
+import Slider from "./Slider";
 
 // Default theme
 import '@splidejs/react-splide/css';
@@ -40,7 +41,7 @@ export default function Popular() {
 
   return (
     <>
-        <Wrapper>
+        {/* <Wrapper>
           <h3 style={{color:"white"}}>Popular Picks</h3>
 
           <Splide 
@@ -70,10 +71,20 @@ export default function Popular() {
                 
                 )}
                 </Splide>
-              </Wrapper>
-    </>
-  );
+              </Wrapper> */}
+              
+              <Slider recipe = {popular} />
+
+               {/* {popular.map((recipe) => {
+        return (
+            <Slider key={recipe.idMeal} recipe = {recipe} />
+        
+        )})  } */}
+
+      </>
+  )
 }
+    
 
 const Wrapper = styled.div`
   margin: 4rem 0rem;
